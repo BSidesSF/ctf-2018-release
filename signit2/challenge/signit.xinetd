@@ -1,0 +1,12 @@
+service signit
+{
+    protocol       = tcp
+    disable        = no
+    port           = 6112
+    flags          = REUSE
+    socket_type    = stream
+    wait           = no
+    user           = ctf
+    server         = /home/ctf/signit
+    type           = UNLISTED
+}

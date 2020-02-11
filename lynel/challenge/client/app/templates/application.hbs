@@ -1,0 +1,18 @@
+{{!-- The menu bar --}}
+<div class='navbar'>
+  {{menu-bar}}
+</div>
+<div class='content route-{{route}}'>
+  <div class='overlay'>
+    {{!-- This lets ember-cli-notifications display notifications on any page --}}
+    {{notification-container}}
+  </div>
+
+  <div class='page-content route-{{route}}'>
+    <div class="container">
+      <div class="starter-template">
+        {{outlet}}
+      </div>
+    </div><!-- /.container -->
+  </div>
+</div>

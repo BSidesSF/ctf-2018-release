@@ -1,0 +1,15 @@
+Two wrong ways to solve this:
+
+1) Factor one of the keys.  It's doable but would take a ton of time
+2) Recover the MD5 and then brute force it
+
+Instead, the message can be recovered because the public exponants are
+small (17 for most of them) and the message isn't padded.  Using
+chinese remainder theorem:
+
+
+GP/PARI> round(sqrtn(lift(chinese(c_drew, chinese(c_ron, chinese(c_bob, chinese(c_lisa, chinese(c_mark, chinese(c_tammy, c_matt))))))), 17))
+%110 = 2511413510659126443800475626796172561281600408930460263517
+
+flag[ghettoprivacyguard]
+

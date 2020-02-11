@@ -1,0 +1,39 @@
+<h1>Profile for <em>{{currentUser.user.name}}</em></h1>
+
+<form {{action 'save' on='submit'}}>
+  <p>Username: {{input value=model.name change=(action 'check_username')}}</p>
+
+  {{#if bad_username}}
+    <p><span class='warning'>{{bad_username}}</span></p>
+  {{/if}}
+
+  <p>
+    Email: {{input value=model.email}}
+    {{#if bad_email}}
+      <span class='warning'>{{bad_email}}</span>
+    {{/if}}
+  </p>
+
+  <p>Comment: {{input value=model.comment}}</p>
+
+  <p>
+    <input type='submit' value='Save!' />
+  </p>
+
+</form>
+
+<h3>Change your password</h3>
+
+<form {{action 'change_password' on='submit'}}>
+  <p>Old password: {{input value=old_password type='password'}}</p>
+  <p>New password: {{input value=password type='password'}}</p>
+  <p>
+    Again: {{input value=password_again type='password'}}
+    {{#if bad_password}}
+      <span class='warning'>{{bad_password}}</span>
+    {{/if}}
+  </p>
+  <p><input type='submit' value='Change password!' /></p>
+</form>
+
+{{outlet}}

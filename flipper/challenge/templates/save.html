@@ -1,0 +1,8 @@
+{% if user.flips %}
+<h3>{{user.save_name}}</h3>
+{% with flips = user.flips %}
+{% include "flips.html" %}
+{% endwith %}
+{% else %}
+<b>No save for {{user.username}}.</b>
+{% endif %}

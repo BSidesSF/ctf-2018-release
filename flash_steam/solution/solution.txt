@@ -1,0 +1,20 @@
+The flag is hidden in $Bitmap
+
+The $MFT has been corrupted but can be repaired by using the $MFTMirr.
+
+Once the $MFT is fixed, there are two corrupted lzip files, one that
+has been deleted.  By recoving both and using lziprecover the lzip can
+be reconstructed.
+
+Once extracted, there is a huge PNG image inside of the lzip with a QR
+Code in it that tells you how to interpret the $Bitmap file as an
+image.
+
+The solution is in morse code and translates to:
+
+FLAG:WHATBITROTISTHIS
+
+This could be upper or lowercase and the colon may not get included so we should accept something like:
+
+/^(?:FLAG:?\s*)?WHATBITROTISTHIS$/i
+

@@ -1,0 +1,10 @@
+{{!-- CDN links to make the jquery work --}}
+
+<p>{{link-to "Home" 'index'}}</p>
+
+<!-- Collect the nav links, forms, and other content for toggling -->
+{{#if session.isAuthenticated}}
+  <p>You're currently logged in as {{currentUser.user.name}}! {{link-to 'Edit profile' 'profile'}} | <a href="#" {{action 'logout'}}>Log out</a></p>
+{{else}} {{!-- If not authenticated --}}
+<p>You are not logged in!</p>
+{{/if}} <!-- /isAuthenticated -->

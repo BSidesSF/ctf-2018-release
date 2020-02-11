@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Turn off bash history
+unset HISTFILE
+
+# Generate a unique session_id value for the user
+export SESSIONID="$(printf $RANDOM$RANDOM)"
+
+# Make PS1 look pretty - bonus points to anybody who notices this. :)
+export PS1='bsides@bsides \w \$ '
+
+# Launch the challenge
+/home/launch_nc.elf

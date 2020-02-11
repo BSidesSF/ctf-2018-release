@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Please wait while you are redirected...</title>
+	</head>
+	<body onload="redirect_user()">
+		<h1>Please wait while you are redirected!</h1>
+		<!--
+		The key is stored at /key.txt
+
+		Send the admin a link, use XSS to get the key!
+
+		Please note the admin uses only the Chrome web browser.
+		-->
+<script>
+// For inspiration https://www.youtube.com/watch?v=zeIjmvZZ_SQ
+function redirect_user() {
+	var redirect_url = window.location.hash.substr(1);
+	// Fixed that stupid XSS hackers! Suck it!
+	if( !redirect_url.startsWith( "javascript" ) && redirect_url.indexOf( "https://www.google.com/" ) !== -1 && /^[a-zA-Z0-9\.\:/\=]+$/.test( redirect_url ) && redirect_url.length < 100) {
+		window.location = redirect_url;
+	} else {
+		alert( "No." );
+		window.location = "https://lmgtfy.com/?q=how+do+i+hack+gibson";
+	}
+}
+</script>
+	</body>
+</html>

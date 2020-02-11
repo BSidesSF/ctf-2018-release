@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Crosswat</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
+    <script src="http://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="/static/main.css">
+    <script src="/static/main.js"></script>
+
+  <script>
+    $(document).ready(function(){
+      makeCrossword("/static/crossword.json");
+    });
+  </script>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row-fluid">
+          <div class="col-md-12">
+             <div class="page-header">
+		<h1>CrossWat!</h1>
+		<p class="lead">All answers must pass PHP's <code>assert</code></p>
+	    </div> 
+          </div>
+      </div>
+      <div class="row-fluid">
+        <div class="col-md-3">
+          <div class="well sidebar-nav">
+            <ul class="nav nav-list">
+              <li id='across' class='scroll'>
+                <p class='answer'><strong>Across</strong></p>
+              </li>
+              <li id='down' class='scroll'>
+                <p class='answer'><strong>Down</strong></p>
+              </li>
+            </ul>
+          </div><!--/.well -->
+        </div><!--/span-->
+        <div class="col-md-9">
+          <div id='grid-container'>
+          </div>
+        </div><!--/span-->
+      </div><!--/row-->
+      <div class="row-fluid">
+        <div class="col-md-12">
+          <p><strong>Wordlist:</strong></p>
+          <div id="wordlist" class="well"></div>
+        </div>
+      </div>
+      <hr>
+    </div><!--/.fluid-container-->
+  </body>
+</html>

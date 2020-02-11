@@ -1,0 +1,22 @@
+Realistic Steam Appliance
+-------------------------
+
+7) Entropy Controller
+
+Our entropy controller samples temperature along the steam pipes at
+regular intervals.  We use these temperature samples to feed our
+entropy pool for cryptographic operations.  We've noticed that when
+customers first turn on their Realistic Steam Appliance the
+temperature readings tend to be somewhat uniform and this has been
+affecting our key generation.
+
+Once again, Drew has come up with an ingenious solution.  We now
+generate two keys, one for the temp sensors slaved off the master
+controller and another for the master controller.  Samples get
+encrypted by the slave sensors first and then encrypted a second time
+by the master controller.  By generating two keys the lack of entropy
+in any given key can be counterbalanced by the double encryption.
+
+We're confident this new design ensures we produce only the finest in
+artisanally crafted ciphertext bits.
+

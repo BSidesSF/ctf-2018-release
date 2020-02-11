@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block body %}
+  <div><p>Flipper is the premiere coin flipping service.  No altcoin here.
+    We use only the <a href='https://docs.python.org/2/library/random.html'>best
+      crypto</a>!</p></div>
+  <div>
+  <div>
+    <h3>Flip Some Coins</h3>
+    <div>
+    <form method='GET'>
+      <input type='number' name='no' maxlength='2' value='{{no}}'>
+      <input type='submit' value='Flip'>
+    </form>
+    </div>
+  {% include "flips.html" %}
+  {% if winning %}
+  <div class='alert alert-success'>
+  Wow, 10 heads in a row!  The odds of that are 1 in 1024.  It gets twice as
+  hard with each additional coin flipped, so if you can get 20 heads in a row,
+  you're truly one in a million!
+  </div>
+  {% endif %}
+  </div>
+  {% if user %}
+  <h3>Save Your Flips</h3>
+  <div>
+    <form method='POST' action='/save'>
+      <input type='hidden' name='flips' value='{{flips}}'>
+      <input type='hidden' name='csrf_token' value='{{user.csrf_token}}'>
+      <label>Save Name:</label>
+      <input name='name'>
+      <input type='submit' value='Save'>
+    </form>
+  </div>
+  <h3>Your Saved Flips</h3>
+  {% include "save.html" %}
+  {% endif %}
+{% endblock %}

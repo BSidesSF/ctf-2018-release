@@ -1,0 +1,57 @@
+{{#if (eq action 'signin')}}
+  <h2>Sign in to your account</h2>
+  <p><a href='#' {{action 'goto_signup'}}>Register a new account</a></p>
+  <p><a href='#' {{action 'goto_forgot'}}>Forgot password?</a></p>
+{{else if (eq action 'signup')}}
+  <h2>Register a new account</h2>
+  <p><a href='#' {{action 'goto_signin'}}>Sign in to your account</a></p>
+  <p><a href='#' {{action 'goto_forgot'}}>Forgot password?</a></p>
+{{else if (eq action 'forgot')}}
+  <h2>Forgot your password?</h2>
+  <p><a href='#' {{action 'goto_signup'}}>Register a new account</a></p>
+  <p><a href='#' {{action 'goto_signin'}}>Sign in to your account</a></p>
+{{else}}
+  <h2>Ended up in a weird state, help? (state = {{action}})</h2>
+{{/if}}
+
+
+{{#if (eq action 'signin')}}
+  <form {{action 'signin' on='submit'}}>
+    <p>
+      Email or username: {{input value=email id='email'}}
+    </p>
+    <p>Password: {{input value=password type='password' id='password'}}</p>
+
+    <p><input type='submit' value='Sign in!'></p>
+  </form>
+{{else if (eq action 'signup')}}
+  <form {{action 'signup' on='submit'}}>
+    <p>
+      Email: {{input value=email id='email'}}
+      {{#if bad_email}}
+        <span class='warning'>{{bad_email}}</span>
+      {{/if}}
+    </p>
+    <p>Password: {{input value=password type='password' id='password'}}</p>
+    <p>
+      Password (again): {{input value=password_again type='password' id='password_again'}}
+      {{#if bad_password}}
+        <span class='warning'>{{bad_password}}</span>
+      {{/if}}
+    </p>
+    <p><input type='submit' value='Sign up!'></p>
+  </form>
+{{else if (eq action 'forgot')}}
+  <form {{action 'forgot' on='submit'}}>
+    <p>
+      Email: {{input value=email id='email'}}
+      {{#if bad_email}}
+        <span class='warning'>{{bad_email}}</span>
+      {{/if}}
+    </p>
+
+    <p><input type='submit' value='Email me!'></p>
+  </form>
+{{/if}}
+
+{{outlet}}

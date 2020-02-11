@@ -1,0 +1,13 @@
+<form {{action 'forgot' on='submit'}}>
+  <p>The token that was emailed to you: {{input value=token}}</p>
+  <p>New password: {{input value=password type='password' id='password'}}</p>
+  <p>
+    (again): {{input value=password_again type='password' id='password_again'}}
+    {{#if bad_password}}
+      <span class='warning'>{{bad_password}}</span>
+    {{/if}}
+  </p>
+
+  <p><input type='submit' value='Reset!'></p>
+</form>
+{{outlet}}

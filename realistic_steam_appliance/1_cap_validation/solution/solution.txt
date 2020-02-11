@@ -1,0 +1,24 @@
+These constants were lifted straight from the Storm worm back in 2008.
+
+Factor N:
+
+GP/PARI> factor(n)
+%37 =
+[ 113511859 1]
+
+[1040388199 1]
+
+
+Compute e:
+
+GP/PARI> Mod(1/d, eulerphi(n))
+%38 = Mod(54799875512748133, 118096397396251884)
+
+
+Recover m:
+
+GP/PARI> modexp(c, e, n)
+%41 = Mod(21514609929376577, 118096398550151941)
+
+
+Solution is "LolzRSA" in ASCII (without the quotes).

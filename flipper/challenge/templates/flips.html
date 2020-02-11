@@ -1,0 +1,9 @@
+{% for f in flips %}
+<ul class='flips'>
+{% if f == "H" %}
+<li><img src='/static/img/bitcoin_heads.png' alt='Heads' title='Heads'></li>
+{% else %}
+<li><img src='/static/img/bitcoin_tails.png' alt='Tails' title='Tails'></li>
+{% endif %}
+</ul>
+{% endfor %}

@@ -1,0 +1,23 @@
+Realistic Steam Appliance
+-------------------------
+
+8) Cyclotron Magnet Controller
+
+Our R&D team has discovered a way to boost the electron energy we dump
+into the carbon blocks to heat our water reservoir and generate steam.
+Instead of using the electrons from the Cathode Ray Tube directly, we
+can feed them into a small cyclotron and give them a good energy
+boost.
+
+Engineering has struggled to generate the keys for the cyclotron
+magnet controller fast enough. The main issue seems to be that the
+embedded magnet controllers struggle to multiple large primes
+together. Once again, Drew has come through with an ingenious solution
+(this time inspired by the work of Williams). Now we retain a table of
+the first 6000 primes to generate an intermediate composite.  Drew has
+found a way to convert this composite into a prime using the 2nd
+cyclotomic polynomial.  This has sped up our prime generation
+significantly. Now we finally can keep up with the cyclotron orbit
+rate.
+
+Check out the certificate and our encrypted sample.

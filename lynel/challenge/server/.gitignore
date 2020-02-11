@@ -1,0 +1,21 @@
+# See https://help.github.com/ignore-files/ for more about ignoring files.
+
+# compiled output
+/build
+/tmp
+
+# dependencies
+/node_modules
+/bower_components
+
+# misc
+/.sass-cache
+/connect.lock
+/coverage/*
+/libpeerconnection.log
+npm-debug.log*
+yarn-error.log
+testem.log
+
+# Test database file
+database-dev.sqlite

@@ -1,0 +1,33 @@
+Realistic Steam Appliance
+-------------------------
+
+2) Steamhammer Powersmoothing
+
+Engineering has been running into issues with the steam distribution
+pipe developing a standing wave between the different branches,
+effectively making it a steamhammer that tears apart some of the
+joints.  We've developed a viable solution via a powersmoothing
+service.  We will sample the pressure at about 100khz and then adjust
+a valve to smooth the pressure out and dampen the standing wave.  We
+have set the powersmooth limit to 100k to match the sample frequency.
+
+To prevent a 3rd-party vendor from servicing the pressure sensor, we
+will encrypt all the samples with the following key:
+
+-----BEGIN PUBLIC KEY-----
+MIICIzANBgkqhkiG9w0BAQEFAAOCAhAAMIICCwKCAgIaTGRRGp/1FpdPtCW7dTvX
+SAtk3B6dsEP6hwvlB8xrd9czAsX7f9/80KOqz7XbOTrRbpY1On0u7S4QWWcrpt7t
+EoggTmxoQ7ZHKgww+Gv1FAGC7OBf5WQFHIebFCKcSQWdyNRlwvgZm+ZgzkKsdKf7
+T3ueLw13dF3IUS5PyjR+DQyINqpCHH8a37+xxLJpZS8z3krRHRdEhdr63M28ahJ+
+qrzbRXjcZ1ZMizkorssEE/bVQo9cplKOub8dTs2g2eURUMKAlOl0JR3Adh/lyUVf
+RSGeJp9j26FFTN4hpg3GZLd211jTqJ/2ULn33gsCW2diDQlL1h/IhgLjGre6jMCB
+lZdPcnU4YuyAii00IqfuVASo6srHviduGwV8bJ3z741eCWMgZUXINFKpIVMTii/O
+1p7ntgY8dUSS4ay/wtN2sYqXJmguq2aygQ5OwEMaDYkt/XrUPyxyZJaEAzeJiPNT
+GXNQmrrIoJm+Qo0AZs3JK0iByO6IkugLt770aFppB0Dr0P+wCNZ2NXbsf6BOf3Gh
+BTKh34Ai6YBgd11YNQB0B8tL67i6C42xLH4NuW4loIHv4fSWmoZ12ca0ed7w2z8g
+cW0gW30RcEPcWFBvkJzNepP+K+zzmWazdOdyWgXGyW/vcZXhAw/IISX1fX4oGx/4
+7YjB2b+ylPTr2Q5LJvUEVnolAgMBAAE=
+-----END PUBLIC KEY-----
+
+
+We have captured a sample for testing purposes.

@@ -1,0 +1,83 @@
+body {
+  padding-top: 10px;
+}
+table {
+    border-collapse: collapse;
+    background-color: #f5f5f5;
+}
+td {
+    border: 1px solid #bbb;
+}
+#grid-container {
+    overflow: scroll;
+}
+#grid {
+  margin: 0;
+  padding: 10px;
+  background-color: #FAFAFA;
+  padding: 20px;
+  width: -moz-max-content;    /* Firefox/Gecko */
+  width: -webkit-max-content; /* Chrome */
+  overflow: scroll;
+}
+#wordlist {
+  margin-top: 20px;
+}
+.token {
+  background-color: #a5acaa;
+  text-align: center;
+  font-family: monospace;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.square{
+  width:80px;
+  height:50px;
+  margin: 0px;
+  padding: 0px;
+  border-collapse: collapse;
+  position: relative;
+  float: left;
+}
+.placeholder {
+  width: 80px;
+  height: 50px;
+  display: inline-block;
+  margin: 5px;
+  padding: 0px;
+}
+.empty{
+}
+.active{
+  background-color: #FFFFA1;
+}
+.active > .token {
+    background-color: #DDDDDD;
+}
+
+.answer {
+  font-family: monospace;
+  height: 30px;
+  margin: 8px;
+  white-space: nowrap;
+  padding: 3px;
+  overflow: visible;
+  min-width: -webkit-fill-available;
+  width: fit-content
+}
+.incorrect {
+  text-decoration: line-through;
+  // content: '✘';
+}
+.correct:after {
+  content: '✔️ ';
+}
+
+.scroll {
+    overflow: scroll;
+}

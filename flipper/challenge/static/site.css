@@ -1,0 +1,6 @@
+ul.flips,
+ul.flips li,
+ul.flips li img{
+  list-style: none;
+  display: inline-block;
+}
