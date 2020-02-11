@@ -14,7 +14,7 @@
     "express": "^4.16.2",
     "ip": "^1.1.5",
     "jsonwebtoken": "^8.1.0",
-    "morgan": "^1.9.0",
+    "morgan": "^1.9.1",
     "multicast-events": "^2.1.2",
     "node-cmd": "^3.0.0",
     "nodemailer": "^4.3.1",
