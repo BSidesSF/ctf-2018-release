@@ -17,7 +17,7 @@
     "morgan": "^1.9.0",
     "multicast-events": "^2.1.2",
     "node-cmd": "^3.0.0",
-    "nodemailer": "^4.3.1",
+    "nodemailer": "^6.4.16",
     "object-hash": "^1.2.0",
     "passport": "^0.4.0",
     "passport-custom": "^1.0.5",
